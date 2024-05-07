@@ -1,0 +1,12 @@
+{
+  "code": "def compare_passenger_capacity_go(preprocessed_shuttles: pd.DataFrame):\n\n    data_frame = (\n        preprocessed_shuttles.groupby([\"shuttle_type\"])\n        .mean(numeric_only=True)\n        .reset_index()\n    )\n    fig = go.Figure(\n        [\n            go.Bar(\n                x=data_frame[\"shuttle_type\"],\n                y=data_frame[\"passenger_capacity\"],\n            )\n        ]\n    )\n\n    return fig\n",
+  "filepath": "demo-project/src/demo_project/pipelines/reporting/nodes.py",
+  "parameters": {},
+  "run_command": null,
+  "inputs": [
+    "preprocessed_shuttles"
+  ],
+  "outputs": [
+    "shuttle_passenger_capacity_plot_go"
+  ]
+}

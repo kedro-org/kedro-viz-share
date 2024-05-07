@@ -1,0 +1,60 @@
+{
+  "type": "pandas.csv_dataset.CSVDataset",
+  "filepath": "/home/runner/work/publish-kedro-viz/publish-kedro-viz/demo-project/data/01_raw/companies.csv",
+  "run_command": null,
+  "preview": {
+    "index": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "columns": [
+      "id",
+      "company_rating",
+      "company_location",
+      "total_fleet_count",
+      "iata_approved"
+    ],
+    "data": [
+      [
+        3888,
+        "100%",
+        "Isle of Man",
+        1.0,
+        "f"
+      ],
+      [
+        46728,
+        "100%",
+        null,
+        1.0,
+        "f"
+      ],
+      [
+        34618,
+        "38%",
+        "Isle of Man",
+        1.0,
+        "f"
+      ],
+      [
+        28619,
+        "100%",
+        "Bosnia and Herzegovina",
+        1.0,
+        "f"
+      ],
+      [
+        8240,
+        null,
+        "Chile",
+        1.0,
+        "t"
+      ]
+    ]
+  },
+  "preview_type": "TablePreview",
+  "stats": null
+}

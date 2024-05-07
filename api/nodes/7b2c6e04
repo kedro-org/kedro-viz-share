@@ -1,0 +1,90 @@
+{
+  "type": "pandas.csv_dataset.CSVDataset",
+  "filepath": "/home/runner/work/publish-kedro-viz/publish-kedro-viz/demo-project/data/01_raw/reviews.csv",
+  "run_command": null,
+  "preview": {
+    "index": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "columns": [
+      "shuttle_id",
+      "review_scores_rating",
+      "review_scores_comfort",
+      "review_scores_amenities",
+      "review_scores_trip",
+      "review_scores_crew",
+      "review_scores_location",
+      "review_scores_price",
+      "number_of_reviews",
+      "reviews_per_month"
+    ],
+    "data": [
+      [
+        45163,
+        91.0,
+        10.0,
+        9.0,
+        9.0,
+        9.0,
+        9.0,
+        9.0,
+        26,
+        0.77
+      ],
+      [
+        49438,
+        96.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        9.0,
+        61,
+        0.62
+      ],
+      [
+        10750,
+        97.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        467,
+        4.66
+      ],
+      [
+        4146,
+        95.0,
+        10.0,
+        10.0,
+        10.0,
+        10.0,
+        9.0,
+        9.0,
+        318,
+        3.22
+      ],
+      [
+        5067,
+        97.0,
+        10.0,
+        9.0,
+        10.0,
+        10.0,
+        9.0,
+        10.0,
+        22,
+        0.29
+      ]
+    ]
+  },
+  "preview_type": "TablePreview",
+  "stats": null
+}

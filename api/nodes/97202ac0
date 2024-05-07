@@ -1,0 +1,12 @@
+{
+  "code": "def compare_passenger_capacity_exp(preprocessed_shuttles: pd.DataFrame):\n    return (\n        preprocessed_shuttles.groupby([\"shuttle_type\"])\n        .mean(numeric_only=True)\n        .reset_index()\n    )\n",
+  "filepath": "demo-project/src/demo_project/pipelines/reporting/nodes.py",
+  "parameters": {},
+  "run_command": null,
+  "inputs": [
+    "preprocessed_shuttles"
+  ],
+  "outputs": [
+    "shuttle_passenger_capacity_plot_exp"
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "nodes": [
+    {
+      "id": "23c94afb",
+      "name": "model_input_table",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "data_processing",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "pandas.parquet_dataset.ParquetDataset",
+      "stats": null
+    },
+    {
+      "id": "329e963c",
+      "name": "split_data_node",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {
+        "model_options": {
+          "test_size": 0.2,
+          "random_state": 3,
+          "features": [
+            "engines",
+            "passenger_capacity",
+            "crew",
+            "d_check_complete",
+            "moon_clearance_complete",
+            "iata_approved",
+            "company_rating",
+            "review_scores_rating"
+          ]
+        }
+      }
+    },
+    {
+      "id": "ab512939",
+      "name": "params:model_options",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "__default__"
+      ],
+      "type": "parameters",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": null,
+      "stats": null
+    },
+    {
+      "id": "cae2d1c7",
+      "name": "X_train",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "io.memory_dataset.MemoryDataset",
+      "stats": null
+    },
+    {
+      "id": "872981f9",
+      "name": "X_test",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "io.memory_dataset.MemoryDataset",
+      "stats": null
+    },
+    {
+      "id": "9ca016a8",
+      "name": "y_train",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "io.memory_dataset.MemoryDataset",
+      "stats": null
+    },
+    {
+      "id": "f6d9538c",
+      "name": "y_test",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "io.memory_dataset.MemoryDataset",
+      "stats": null
+    },
+    {
+      "id": "2ab3579f",
+      "name": "train_model_node",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    },
+    {
+      "id": "93d834e1",
+      "name": "regressor",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "pickle.pickle_dataset.PickleDataset",
+      "stats": null
+    },
+    {
+      "id": "aadc655d",
+      "name": "evaluate_model_node",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    },
+    {
+      "id": "966b9734",
+      "name": "metrics",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "tracking.metrics_dataset.MetricsDataset",
+      "stats": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "93d834e1",
+      "target": "aadc655d"
+    },
+    {
+      "source": "9ca016a8",
+      "target": "2ab3579f"
+    },
+    {
+      "source": "cae2d1c7",
+      "target": "2ab3579f"
+    },
+    {
+      "source": "329e963c",
+      "target": "f6d9538c"
+    },
+    {
+      "source": "329e963c",
+      "target": "872981f9"
+    },
+    {
+      "source": "aadc655d",
+      "target": "966b9734"
+    },
+    {
+      "source": "f6d9538c",
+      "target": "aadc655d"
+    },
+    {
+      "source": "2ab3579f",
+      "target": "93d834e1"
+    },
+    {
+      "source": "329e963c",
+      "target": "9ca016a8"
+    },
+    {
+      "source": "23c94afb",
+      "target": "329e963c"
+    },
+    {
+      "source": "ab512939",
+      "target": "329e963c"
+    },
+    {
+      "source": "329e963c",
+      "target": "cae2d1c7"
+    },
+    {
+      "source": "872981f9",
+      "target": "aadc655d"
+    }
+  ],
+  "layers": [],
+  "tags": [],
+  "pipelines": [
+    {
+      "id": "__default__",
+      "name": "__default__"
+    },
+    {
+      "id": "reporting",
+      "name": "reporting"
+    },
+    {
+      "id": "data_science",
+      "name": "data_science"
+    },
+    {
+      "id": "data_processing",
+      "name": "data_processing"
+    }
+  ],
+  "modular_pipelines": {
+    "__root__": {
+      "id": "__root__",
+      "name": "__root__",
+      "inputs": [],
+      "outputs": [],
+      "children": [
+        {
+          "id": "966b9734",
+          "type": "data"
+        },
+        {
+          "id": "93d834e1",
+          "type": "data"
+        },
+        {
+          "id": "f6d9538c",
+          "type": "data"
+        },
+        {
+          "id": "872981f9",
+          "type": "data"
+        },
+        {
+          "id": "329e963c",
+          "type": "task"
+        },
+        {
+          "id": "2ab3579f",
+          "type": "task"
+        },
+        {
+          "id": "9ca016a8",
+          "type": "data"
+        },
+        {
+          "id": "cae2d1c7",
+          "type": "data"
+        },
+        {
+          "id": "ab512939",
+          "type": "parameters"
+        },
+        {
+          "id": "23c94afb",
+          "type": "data"
+        },
+        {
+          "id": "aadc655d",
+          "type": "task"
+        }
+      ]
+    }
+  },
+  "selected_pipeline": "data_science"
+}

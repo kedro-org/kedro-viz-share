@@ -1,0 +1,201 @@
+{
+  "nodes": [
+    {
+      "id": "d75ec4b0",
+      "name": "create_confusion_matrix",
+      "tags": [],
+      "pipelines": [
+        "reporting",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    },
+    {
+      "id": "aed46479",
+      "name": "companies",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "reporting",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "369acf98",
+      "name": "dummy_confusion_matrix",
+      "tags": [],
+      "pipelines": [
+        "reporting",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "matplotlib.matplotlib_writer.MatplotlibWriter",
+      "stats": null
+    },
+    {
+      "id": "c071dac9",
+      "name": "preprocessed_shuttles",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "reporting",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "pandas.parquet_dataset.ParquetDataset",
+      "stats": null
+    },
+    {
+      "id": "97202ac0",
+      "name": "compare_passenger_capacity_exp",
+      "tags": [],
+      "pipelines": [
+        "reporting",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    },
+    {
+      "id": "a9506115",
+      "name": "shuttle_passenger_capacity_plot_exp",
+      "tags": [],
+      "pipelines": [
+        "reporting",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "plotly.plotly_dataset.PlotlyDataset",
+      "stats": null
+    },
+    {
+      "id": "81b5866f",
+      "name": "compare_passenger_capacity_go",
+      "tags": [],
+      "pipelines": [
+        "reporting",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    },
+    {
+      "id": "c1311718",
+      "name": "shuttle_passenger_capacity_plot_go",
+      "tags": [],
+      "pipelines": [
+        "reporting",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "plotly.json_dataset.JSONDataset",
+      "stats": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "aed46479",
+      "target": "d75ec4b0"
+    },
+    {
+      "source": "d75ec4b0",
+      "target": "369acf98"
+    },
+    {
+      "source": "c071dac9",
+      "target": "97202ac0"
+    },
+    {
+      "source": "81b5866f",
+      "target": "c1311718"
+    },
+    {
+      "source": "c071dac9",
+      "target": "81b5866f"
+    },
+    {
+      "source": "97202ac0",
+      "target": "a9506115"
+    }
+  ],
+  "layers": [],
+  "tags": [],
+  "pipelines": [
+    {
+      "id": "__default__",
+      "name": "__default__"
+    },
+    {
+      "id": "reporting",
+      "name": "reporting"
+    },
+    {
+      "id": "data_science",
+      "name": "data_science"
+    },
+    {
+      "id": "data_processing",
+      "name": "data_processing"
+    }
+  ],
+  "modular_pipelines": {
+    "__root__": {
+      "id": "__root__",
+      "name": "__root__",
+      "inputs": [],
+      "outputs": [],
+      "children": [
+        {
+          "id": "97202ac0",
+          "type": "task"
+        },
+        {
+          "id": "aed46479",
+          "type": "data"
+        },
+        {
+          "id": "81b5866f",
+          "type": "task"
+        },
+        {
+          "id": "c1311718",
+          "type": "data"
+        },
+        {
+          "id": "d75ec4b0",
+          "type": "task"
+        },
+        {
+          "id": "369acf98",
+          "type": "data"
+        },
+        {
+          "id": "c071dac9",
+          "type": "data"
+        },
+        {
+          "id": "a9506115",
+          "type": "data"
+        }
+      ]
+    }
+  },
+  "selected_pipeline": "reporting"
+}

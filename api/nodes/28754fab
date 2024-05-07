@@ -1,0 +1,14 @@
+{
+  "code": "def create_model_input_table(\n    shuttles: pd.DataFrame, companies: pd.DataFrame, reviews: pd.DataFrame\n) -> pd.DataFrame:\n    \"\"\"Combines all data to create a model input table.\n\n    Args:\n        shuttles: Preprocessed data for shuttles.\n        companies: Preprocessed data for companies.\n        reviews: Raw data for reviews.\n    Returns:\n        Model input table.\n\n    \"\"\"\n    rated_shuttles = shuttles.merge(reviews, left_on=\"id\", right_on=\"shuttle_id\")\n    rated_shuttles = rated_shuttles.drop(\"id\", axis=1)\n    model_input_table = rated_shuttles.merge(\n        companies, left_on=\"company_id\", right_on=\"id\"\n    )\n    model_input_table = model_input_table.dropna()\n    return model_input_table\n",
+  "filepath": "demo-project/src/demo_project/pipelines/data_processing/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes=create_model_input_table_node",
+  "inputs": [
+    "preprocessed_shuttles",
+    "preprocessed_companies",
+    "reviews"
+  ],
+  "outputs": [
+    "model_input_table"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "code": "def preprocess_shuttles(shuttles: pd.DataFrame) -> pd.DataFrame:\n    \"\"\"Preprocesses the data for shuttles.\n\n    Args:\n        shuttles: Raw data.\n    Returns:\n        Preprocessed data, with `price` converted to a float and `d_check_complete`,\n        `moon_clearance_complete` converted to boolean.\n    \"\"\"\n    shuttles[\"d_check_complete\"] = _is_true(shuttles[\"d_check_complete\"])\n    shuttles[\"moon_clearance_complete\"] = _is_true(shuttles[\"moon_clearance_complete\"])\n    shuttles[\"price\"] = _parse_money(shuttles[\"price\"])\n    return shuttles\n",
+  "filepath": "demo-project/src/demo_project/pipelines/data_processing/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes=preprocess_shuttles_node",
+  "inputs": [
+    "shuttles"
+  ],
+  "outputs": [
+    "preprocessed_shuttles"
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "type": "pandas.excel_dataset.ExcelDataset",
+  "filepath": "/home/runner/work/publish-kedro-viz/publish-kedro-viz/demo-project/data/01_raw/shuttles.xlsx",
+  "run_command": null,
+  "preview": {
+    "index": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "columns": [
+      "id",
+      "shuttle_location",
+      "shuttle_type",
+      "engine_type",
+      "engine_vendor",
+      "engines",
+      "passenger_capacity",
+      "cancellation_policy",
+      "crew",
+      "d_check_complete",
+      "moon_clearance_complete",
+      "price",
+      "company_id"
+    ],
+    "data": [
+      [
+        45163,
+        "Sao Tome and Principe",
+        "Type V5",
+        "Plasma",
+        "ThetaBase Services",
+        2,
+        4,
+        "moderate",
+        2,
+        "f",
+        "f",
+        "$1,715.0",
+        32413
+      ],
+      [
+        49438,
+        "Wallis and Futuna",
+        "Type V2",
+        "Plasma",
+        "ThetaBase Services",
+        3,
+        5,
+        "moderate",
+        3,
+        "f",
+        "f",
+        "$3,405.0",
+        14122
+      ],
+      [
+        10750,
+        "Niue",
+        "Type F5",
+        "Quantum",
+        "ThetaBase Services",
+        1,
+        2,
+        "strict",
+        1,
+        "t",
+        "f",
+        "$1,806.0",
+        47761
+      ],
+      [
+        4146,
+        "Malta",
+        "Type V2",
+        "Quantum",
+        "ThetaBase Services",
+        1,
+        2,
+        "moderate",
+        1,
+        "f",
+        "f",
+        "$1,676.0",
+        26648
+      ],
+      [
+        5067,
+        "Malta",
+        "Type V2",
+        "Plasma",
+        "ThetaBase Services",
+        5,
+        10,
+        "strict",
+        5,
+        "f",
+        "f",
+        "$4,718.0",
+        26648
+      ]
+    ]
+  },
+  "preview_type": "TablePreview",
+  "stats": null
+}

@@ -1,0 +1,250 @@
+{
+  "nodes": [
+    {
+      "id": "aed46479",
+      "name": "companies",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "reporting",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "9e16ddd2",
+      "name": "preprocess_companies_node",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    },
+    {
+      "id": "493ad53a",
+      "name": "preprocessed_companies",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "pandas.parquet_dataset.ParquetDataset",
+      "stats": null
+    },
+    {
+      "id": "4ca0be7b",
+      "name": "companies_columns",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "tracking.json_dataset.JSONDataset",
+      "stats": null
+    },
+    {
+      "id": "acdb05cf",
+      "name": "preprocess_shuttles_node",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    },
+    {
+      "id": "f1d596c2",
+      "name": "shuttles",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "pandas.excel_dataset.ExcelDataset",
+      "stats": null
+    },
+    {
+      "id": "c071dac9",
+      "name": "preprocessed_shuttles",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "reporting",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "pandas.parquet_dataset.ParquetDataset",
+      "stats": null
+    },
+    {
+      "id": "28754fab",
+      "name": "create_model_input_table_node",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "__default__"
+      ],
+      "type": "task",
+      "modular_pipelines": [],
+      "parameters": {}
+    },
+    {
+      "id": "7b2c6e04",
+      "name": "reviews",
+      "tags": [],
+      "pipelines": [
+        "data_processing",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "pandas.csv_dataset.CSVDataset",
+      "stats": null
+    },
+    {
+      "id": "23c94afb",
+      "name": "model_input_table",
+      "tags": [],
+      "pipelines": [
+        "data_science",
+        "data_processing",
+        "__default__"
+      ],
+      "type": "data",
+      "modular_pipelines": [],
+      "layer": null,
+      "dataset_type": "pandas.parquet_dataset.ParquetDataset",
+      "stats": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "28754fab",
+      "target": "23c94afb"
+    },
+    {
+      "source": "f1d596c2",
+      "target": "acdb05cf"
+    },
+    {
+      "source": "493ad53a",
+      "target": "28754fab"
+    },
+    {
+      "source": "9e16ddd2",
+      "target": "493ad53a"
+    },
+    {
+      "source": "acdb05cf",
+      "target": "c071dac9"
+    },
+    {
+      "source": "7b2c6e04",
+      "target": "28754fab"
+    },
+    {
+      "source": "aed46479",
+      "target": "9e16ddd2"
+    },
+    {
+      "source": "9e16ddd2",
+      "target": "4ca0be7b"
+    },
+    {
+      "source": "c071dac9",
+      "target": "28754fab"
+    }
+  ],
+  "layers": [],
+  "tags": [],
+  "pipelines": [
+    {
+      "id": "__default__",
+      "name": "__default__"
+    },
+    {
+      "id": "reporting",
+      "name": "reporting"
+    },
+    {
+      "id": "data_science",
+      "name": "data_science"
+    },
+    {
+      "id": "data_processing",
+      "name": "data_processing"
+    }
+  ],
+  "modular_pipelines": {
+    "__root__": {
+      "id": "__root__",
+      "name": "__root__",
+      "inputs": [],
+      "outputs": [],
+      "children": [
+        {
+          "id": "4ca0be7b",
+          "type": "data"
+        },
+        {
+          "id": "f1d596c2",
+          "type": "data"
+        },
+        {
+          "id": "c071dac9",
+          "type": "data"
+        },
+        {
+          "id": "aed46479",
+          "type": "data"
+        },
+        {
+          "id": "493ad53a",
+          "type": "data"
+        },
+        {
+          "id": "28754fab",
+          "type": "task"
+        },
+        {
+          "id": "23c94afb",
+          "type": "data"
+        },
+        {
+          "id": "7b2c6e04",
+          "type": "data"
+        },
+        {
+          "id": "acdb05cf",
+          "type": "task"
+        },
+        {
+          "id": "9e16ddd2",
+          "type": "task"
+        }
+      ]
+    }
+  },
+  "selected_pipeline": "data_processing"
+}

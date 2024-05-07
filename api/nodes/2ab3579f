@@ -1,0 +1,13 @@
+{
+  "code": "def train_model(X_train: pd.DataFrame, y_train: pd.Series) -> LinearRegression:\n    \"\"\"Trains the linear regression model.\n\n    Args:\n        X_train: Training data of independent features.\n        y_train: Training data for price.\n\n    Returns:\n        Trained model.\n    \"\"\"\n    regressor = LinearRegression()\n    regressor.fit(X_train, y_train)\n    return regressor\n",
+  "filepath": "demo-project/src/demo_project/pipelines/data_science/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes=train_model_node",
+  "inputs": [
+    "X_train",
+    "y_train"
+  ],
+  "outputs": [
+    "regressor"
+  ]
+}

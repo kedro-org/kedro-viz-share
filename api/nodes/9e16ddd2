@@ -1,0 +1,13 @@
+{
+  "code": "def preprocess_companies(companies: pd.DataFrame) -> Tuple[pd.DataFrame, Dict]:\n    \"\"\"Preprocesses the data for companies.\n\n    Args:\n        companies: Raw data.\n    Returns:\n        Preprocessed data, with `company_rating` converted to a float and\n        `iata_approved` converted to boolean.\n    \"\"\"\n    companies[\"iata_approved\"] = _is_true(companies[\"iata_approved\"])\n    companies[\"company_rating\"] = _parse_percentage(companies[\"company_rating\"])\n    return companies, {\"columns\": companies.columns.tolist(), \"data_type\": \"companies\"}\n",
+  "filepath": "demo-project/src/demo_project/pipelines/data_processing/nodes.py",
+  "parameters": {},
+  "run_command": "kedro run --to-nodes=preprocess_companies_node",
+  "inputs": [
+    "companies"
+  ],
+  "outputs": [
+    "preprocessed_companies",
+    "companies_columns"
+  ]
+}

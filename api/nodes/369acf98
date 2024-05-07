@@ -1,0 +1,8 @@
+{
+  "type": "matplotlib.matplotlib_writer.MatplotlibWriter",
+  "filepath": "/home/runner/work/publish-kedro-viz/publish-kedro-viz/demo-project/data/08_reporting/dummy_confusion_matrix.png",
+  "run_command": "kedro run --to-outputs=dummy_confusion_matrix",
+  "preview": null,
+  "preview_type": "ImagePreview",
+  "stats": null
+}

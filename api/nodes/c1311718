@@ -1,0 +1,8 @@
+{
+  "type": "plotly.json_dataset.JSONDataset",
+  "filepath": "/home/runner/work/publish-kedro-viz/publish-kedro-viz/demo-project/data/08_reporting/shuttle_passenger_capacity_plot_go.json",
+  "run_command": "kedro run --to-outputs=shuttle_passenger_capacity_plot_go",
+  "preview": null,
+  "preview_type": "PlotlyPreview",
+  "stats": null
+}

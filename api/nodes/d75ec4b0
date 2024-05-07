@@ -1,0 +1,12 @@
+{
+  "code": "def create_confusion_matrix(companies: pd.DataFrame):\n    actuals = [0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1]\n    predicted = [1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1]\n    data = {\"y_Actual\": actuals, \"y_Predicted\": predicted}\n    df = pd.DataFrame(data, columns=[\"y_Actual\", \"y_Predicted\"])\n    confusion_matrix = pd.crosstab(\n        df[\"y_Actual\"], df[\"y_Predicted\"], rownames=[\"Actual\"], colnames=[\"Predicted\"]\n    )\n    sn.heatmap(confusion_matrix, annot=True)\n    return plt\n",
+  "filepath": "demo-project/src/demo_project/pipelines/reporting/nodes.py",
+  "parameters": {},
+  "run_command": null,
+  "inputs": [
+    "companies"
+  ],
+  "outputs": [
+    "dummy_confusion_matrix"
+  ]
+}

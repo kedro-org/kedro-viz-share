@@ -1,0 +1,8 @@
+{
+  "type": "pandas.parquet_dataset.ParquetDataset",
+  "filepath": "/home/runner/work/publish-kedro-viz/publish-kedro-viz/demo-project/data/02_intermediate/preprocessed_shuttles.pq",
+  "run_command": "kedro run --to-outputs=preprocessed_shuttles",
+  "preview": null,
+  "preview_type": "TablePreview",
+  "stats": null
+}
